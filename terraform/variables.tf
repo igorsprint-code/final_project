@@ -9,7 +9,7 @@ variable "folder_id" {
 }
 
 variable "default_zone" {
-  type = string
+  type    = string
   default = "ru-central1-a"
 }
 
@@ -17,17 +17,17 @@ variable "default_zone" {
 ### vpc vars
 
 variable "vpc_name" {
-    type = string
-    default = "project_network"
+  type    = string
+  default = "project_network"
 }
 
 variable "cidr" {
-  type = list(string)
-  default = [ "10.0.1.0/24" ]  
+  type    = list(string)
+  default = ["10.0.1.0/24"]
 }
 
 variable "subnet_zone" {
-  type = string
+  type    = string
   default = "ru-central1-a"
 }
 
@@ -36,28 +36,28 @@ variable "subnet_zone" {
 
 
 variable "image" {
-  type = string
-  default = "ubuntu-2204-lts"    
+  type    = string
+  default = "ubuntu-2204-lts"
 }
 
 
 variable "app_vm_count" {
-  type = number
+  type    = number
   default = 2
 }
 
 variable "app_vm_name" {
-  type = string
+  type    = string
   default = "app_vm"
 }
 
 variable "app_vm_host_name" {
-  type = string
+  type    = string
   default = "app-host"
 }
 
 variable "app_vm_platform" {
-  type = string 
+  type    = string
   default = "standard-v4a"
 }
 
@@ -74,18 +74,24 @@ variable "app_vms_resources" {
       memory        = 2
       core_fraction = 20
     }
-   
+
   }
 }
 
 variable "app_vm_preemptible" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "app_vm_nat" {
-  type = bool
+  type    = bool
   default = true
+}
+
+
+variable "ssh_user_name" {
+  type    = string
+  default = "test"
 }
 
 variable "metadata" {
@@ -101,56 +107,56 @@ variable "metadata" {
 
 
 variable "cluster_name" {
-  type = string
+  type    = string
   default = "project_cluster"
 }
 
 variable "cluster_env" {
-  type = string
+  type    = string
   default = "PRESTABLE"
 }
 
 variable "cluster_version" {
-  type = string
+  type    = string
   default = "8.0"
 }
 
 
 variable "cluster_resource_preset" {
-  type = string
+  type    = string
   default = "s2.micro"
 }
 
 variable "cluster_disk_type" {
-  type = string
-  default = "network-ssd" 
+  type    = string
+  default = "network-ssd"
 }
 
 variable "cluster_disk_size" {
-  type = number
+  type    = number
   default = 16
 }
 
 
 variable "cluster_zone" {
-  type = string
+  type    = string
   default = "ru-central1-a"
-  
+
 }
 
 
 ### db vars
 
 variable "db_name" {
-  type = string
+  type    = string
   default = "app_db"
 }
 
 
 
 ### registry vars
- 
+
 variable "registry_name" {
-  type = string
-  default = "project-registry" 
+  type    = string
+  default = "project-registry"
 }

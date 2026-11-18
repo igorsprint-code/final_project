@@ -56,6 +56,6 @@ variable "security_group_egress" {
 
 
 variable "sec_group_name" {
-  type = string
-  default = "project_security"  
+  type    = string
+  default = "project_security"
 }

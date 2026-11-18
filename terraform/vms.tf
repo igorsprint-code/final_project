@@ -28,8 +28,9 @@ resource "yandex_compute_instance" "app_vm" {
     security_group_ids = [yandex_vpc_security_group.project_sec_group.id]
   }
 
-  metadata = merge(var.metadata, {
-    ssh-keys = "ubuntu:${local.ssh_public}"
-  })
+  metadata = merge(
+    var.metadata,
+    local.vm_metadata
+  )
 
 }
