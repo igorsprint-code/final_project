@@ -43,7 +43,7 @@ variable "image" {
 
 variable "app_vm_count" {
   type    = number
-  default = 2
+  default = 1
 }
 
 variable "app_vm_name" {
@@ -70,8 +70,8 @@ variable "app_vms_resources" {
   }))
   default = {
     app_vm = {
-      cores         = 2
-      memory        = 2
+      cores         = 4
+      memory        = 4
       core_fraction = 20
     }
 
