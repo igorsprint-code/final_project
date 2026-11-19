@@ -19,6 +19,7 @@
 #   host {
 #     zone      = var.cluster_zone
 #     subnet_id = yandex_vpc_subnet.project_subnet.id
+#     name = "db-host"
 #   }
 # }
 
