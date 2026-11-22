@@ -70,9 +70,9 @@ variable "app_vms_resources" {
   }))
   default = {
     app_vm = {
-      cores         = 4
+      cores         = 2
       memory        = 4
-      core_fraction = 20
+      core_fraction = 100
     }
 
   }
@@ -152,6 +152,13 @@ variable "db_name" {
   default = "app_db"
 }
 
+variable "db_user" {
+  type = string  
+}
+
+variable "db_password" {
+  type = string  
+}
 
 
 ### registry vars

@@ -26,8 +26,8 @@ resource "yandex_mdb_mysql_cluster" "project_cluster" {
 
 resource "yandex_mdb_mysql_user" "app_user" {
   cluster_id = yandex_mdb_mysql_cluster.project_cluster.id
-  name       = "john"
-  password   = "password"
+  name       = var.db_user
+  password   = var.db_password
 
   permission {
     database_name = yandex_mdb_mysql_database.app_db.name
