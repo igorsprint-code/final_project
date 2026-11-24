@@ -19,7 +19,7 @@ resource "yandex_mdb_mysql_cluster" "project_cluster" {
   host {
     zone      = var.cluster_zone
     subnet_id = yandex_vpc_subnet.project_subnet.id
-    name = "db-host"
+    name = var.db_host_name
   }
 }
 
@@ -31,12 +31,12 @@ resource "yandex_mdb_mysql_user" "app_user" {
 
   permission {
     database_name = yandex_mdb_mysql_database.app_db.name
-    roles         = ["ALL"]
+    roles         = var.roles
   }
 
 
 
-  global_permissions = ["PROCESS"]
+  global_permissions = var.global_permissions
 
-  authentication_plugin = "SHA256_PASSWORD"
+  authentication_plugin = var.authentication_plugin
 }

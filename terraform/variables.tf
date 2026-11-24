@@ -160,10 +160,25 @@ variable "db_password" {
   type = string  
 }
 
+variable "roles" {
+  type    = list(string)
+  default = ["ALL"]
+}
+
+variable "global_permissions" {
+  type = list(string)
+  default = ["PROCESS"]  
+}
+
+variable "authentication_plugin" {
+  type = string
+  default = "SHA256_PASSWORD"  
+}
+
+variable "db_host_name" {
+  type = string
+  default = "db-host"  
+}
 
 ### registry vars
 
-variable "registry_name" {
-  type    = string
-  default = "project-registry"
-}
