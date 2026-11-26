@@ -74,7 +74,9 @@ tfstate в хранилище:
 
 ![tfstate](screenshots/4.png)
 
-После подключения по ssh к ВМ проверяем работу контейнера:
+После подключения по ssh к ВМ проверяем установку docker и docker compose, работу контейнера :
+
+![docker](screenshots/9.png)
 
 ![docker](screenshots/5.png)
 

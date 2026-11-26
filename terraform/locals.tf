@@ -9,6 +9,7 @@ locals {
       db_password = var.db_password
       db_name = var.db_name
       db_host = yandex_mdb_mysql_cluster.project_cluster.host[0].fqdn
+      yc_registry = yandex_container_registry.yc_registry.id
     })
   }
 
